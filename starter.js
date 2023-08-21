@@ -56,4 +56,29 @@
 
 // ----------------------------------------
 
+// const sourin = {
+//     name: 'Sourin',
+//     dob: 2002,
+//     calcAge: function() {
+        
+//         const isMillenial = () => {
+//             console.log(this);
+            // console.log(this.dob >= 1981 && this.dob <=1996);
+//         };
+//         isMillenial();
+//         console.log (2023 - this.dob);
+//     },
 
+//     greet: () => console.log(`Hey ${this.name}`)
+// };
+
+// console.log(sourin.calcAge());
+
+// ----------------------------------------
+
+// const addNums = function (a, b) {
+//     console.log(arguments);
+//     return a + b;
+}
+
+// console.log(addNums(2,3,1,1));
