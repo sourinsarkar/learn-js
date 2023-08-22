@@ -163,44 +163,6 @@
 // const someInputs = [1,2,3];
 
 // console.log(someFun(...someInputs));
-
 // ----------------------------------------------------------------------------------------------------------------------
 
-let lastName = 'Kumari';
-let oldLastname = lastName;
-lastName = 'Sarkar';
-
-// console.log(oldLastname, lastName);
-
-const kishu = {
-    firstName: 'Akansha',
-    lastName: 'Kumari',
-    age: 21,
-    family: ['Alice', 'Bob']
-};
-
-// const marriedKishu = kishu;
-
-// marriedKishu.lastName = 'Sarkar';
-
-// console.log('Before marriage: ', kishu);
-// console.log('After marriage: ', marriedKishu);
-
-// copying objects
-
-// const akansha = Object.assign({}, kishu);
-// akansha.lastName = 'Gupta';
-// akansha.family.push('Mary');
-
-// console.log(kishu, akansha);
-// console.log(kishu.lastName, akansha.lastName);
-
-// const akansha = {...kishu, family: [...kishu.family]};
-// console.log(kishu);
-// akansha.family.push('Amit');
-// akansha.family.pop();
-// akansha.lastName = 'Sarkar';
-// console.log(akansha);
-
-// --------------------------------------------------------------------------------------------
 
