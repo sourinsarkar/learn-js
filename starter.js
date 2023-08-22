@@ -85,4 +85,122 @@
 
 // ----------------------------------------
 
+// const greet = x => console.log(x);
+// greet('Hello');
+
+// const some = 10;
+// const something = (some <= 21) ? () => console.log('Eligible') : console.log('In-eligible');
+// something();
+
+// ----------------------------------------
+
+// Spread OP
+
+// const foo = function () {
+//     console.log(arguments);
+// }
+
+// foo(1,2,3,4,5);
+
+// const foot = (...n) => {
+//     console.log(n);
+// }
+
+// foot(1,2,3,4,5);
+
+// const foo = ['Hey', 'Dumbo'];
+// console.log(...foo);
+
+// copying array
+
+// const foo1 = [...foo, 'How','are','you?'];
+// console.log(foo1);
+// console.log(...foo1);
+
+// cloning using spread op
+
+// const poo1 = ['Hello'];
+
+// const poo2 = poo1;
+// const poo21 = [...poo1];
+
+// poo2.push('Seya');
+// poo21.push('Seya','Heya');
+
+// console.log(poo1);
+// console.log(poo2); // shallow copy
+// console.log(poo1);
+// console.log(poo21); // deep copy
+
+// Spread with objects
+
+// const too = {
+//     x: 1,
+//     y: 2
+// }
+
+// const soo = {
+//     z: 3
+// }
+
+// const newthing = {...too, ...soo};
+// console.log(newthing);
+
+// Rest Parameter
+
+// const wow = function(...args) {
+//     console.log(args);
+// }
+
+// wow(1,2,3,4,5,'hello');
+
+// Passing multiple arguments to a function using Spread Op
+
+// function someFun(x,y,z) {
+//     return (x + y + z);
+// }
+
+// const someInputs = [1,2,3];
+
+// console.log(someFun(...someInputs));
+
+// ----------------------------------------------------------------------------------------------------------------------
+
+let lastName = 'Kumari';
+let oldLastname = lastName;
+lastName = 'Sarkar';
+
+// console.log(oldLastname, lastName);
+
+const kishu = {
+    firstName: 'Akansha',
+    lastName: 'Kumari',
+    age: 21,
+    family: ['Alice', 'Bob']
+};
+
+// const marriedKishu = kishu;
+
+// marriedKishu.lastName = 'Sarkar';
+
+// console.log('Before marriage: ', kishu);
+// console.log('After marriage: ', marriedKishu);
+
+// copying objects
+
+// const akansha = Object.assign({}, kishu);
+// akansha.lastName = 'Gupta';
+// akansha.family.push('Mary');
+
+// console.log(kishu, akansha);
+// console.log(kishu.lastName, akansha.lastName);
+
+// const akansha = {...kishu, family: [...kishu.family]};
+// console.log(kishu);
+// akansha.family.push('Amit');
+// akansha.family.pop();
+// akansha.lastName = 'Sarkar';
+// console.log(akansha);
+
+// --------------------------------------------------------------------------------------------
 
