@@ -35,7 +35,7 @@
 // console.log(this);
 
 // const age = function (birthYear) {
-    // return (2023 - brithYear);
+// return (2023 - brithYear);
 //     console.log(2023 - birthYear);
 //     console.log(this);
 // };
@@ -48,7 +48,7 @@
 
 // const age = (birthYear) => {
 //     console.log(2023 - birthYear);
-    // return (2023 - birthYear);
+// return (2023 - birthYear);
 //     console.log(this);
 // };
 
@@ -60,10 +60,10 @@
 //     name: 'Sourin',
 //     dob: 2002,
 //     calcAge: function() {
-        
+
 //         const isMillenial = () => {
 //             console.log(this);
-            // console.log(this.dob >= 1981 && this.dob <=1996);
+// console.log(this.dob >= 1981 && this.dob <=1996);
 //         };
 //         isMillenial();
 //         console.log (2023 - this.dob);
@@ -176,7 +176,7 @@ const r = {
     categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
     starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
     mainMenu: ['Shahi Thali', 'Dum Biryani', 'Dal Bati Churma'],
-    order: function(starterIndex, mainIndex) {
+    order: function (starterIndex, mainIndex) {
         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
     },
 
@@ -199,10 +199,59 @@ const r = {
     //     console.log(obj);
     // },
 
-    orderDelivery: function ({time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex}) {
+    orderDelivery: function ({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
         // console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
     },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+    },
 };
+
+// ---------------
+
+// Spread OP from JS Course
+
+// const arr = [7,8,9];
+// const newArr = [1,2,...arr];
+// console.log(newArr);
+// console.log(1,3,7,8,9);
+
+// const newMenu = [...r.mainMenu, 'Khichdi'];
+// console.log(newMenu);
+
+// const obj = {...arr};
+// console.log(obj);
+// console.log(...r.name);
+// const str = [...r.name,' ', 'S.'];
+// console.log(str);
+
+// console.log('s','o','u','r','i','n');
+
+// const ingredients = [
+//     prompt("Let's make Pasta! Ingredient 1?"),
+//     prompt('Ingredient 2?'),
+//     prompt('Ingredient 3?'),
+// ];
+
+// console.log(ingredients);
+// r.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// r.orderPasta(...ingredients);
+
+// const newR = {foundedIn: 2002, ...r, founder: 'Sourin Sarkar'};
+// console.log(newR);
+
+
+// const newR = {
+//     ...r,
+//     catgories: [...r.categories],
+// };
+
+// console.log(r);
+// console.log(newR);
+
+// newR.categories.push('Japanese');
+
 
 // ---------------
 
@@ -211,7 +260,7 @@ const r = {
 //     address: 'Sayal, Ramgarh, JH',
 //     mainIndex: 2,
 //     starterIndex: 3,
-// }); 
+// });
 
 // r.orderDelivery({
 //     mainIndex: 1,
@@ -301,3 +350,4 @@ const r = {
 
 // console.log(`${naam} is open on Friday from ${f_o} am to ${f_c} pm everyweek.`);
 // console.log(`${naam} is open on Saturday from ${s_o} am to ${s_c} pm everyweek.`);
+
