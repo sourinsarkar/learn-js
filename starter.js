@@ -170,43 +170,43 @@
 
 // Destructuring
 
-const r = {
-    name: 'Sourin\'s Rasoi',
-    location: 'Sourin City, Bangaluru, Karnataka, India',
-    categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
-    starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
-    mainMenu: ['Shahi Thali', 'Dum Biryani', 'Dal Bati Churma'],
-    order: function (starterIndex, mainIndex) {
-        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-    },
+// const r = {
+//     name: 'Sourin\'s Rasoi',
+//     location: 'Sourin City, Bangaluru, Karnataka, India',
+//     categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
+//     starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
+//     mainMenu: ['Shahi Thali', 'Dum Biryani', 'Dal Bati Churma'],
+//     order: function (starterIndex, mainIndex) {
+//         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//     },
 
-    openingHours: {
-        thu: {
-            open: 12,
-            close: 22,
-        },
-        fri: {
-            open: 11,
-            close: 23,
-        },
-        sat: {
-            open: 0,
-            close: 24,
-        },
-    },
+//     openingHours: {
+//         thu: {
+//             open: 12,
+//             close: 22,
+//         },
+//         fri: {
+//             open: 11,
+//             close: 23,
+//         },
+//         sat: {
+//             open: 0,
+//             close: 24,
+//         },
+//     },
 
-    // orderDelivery: function (obj) {
-    //     console.log(obj);
-    // },
+//     // orderDelivery: function (obj) {
+//     //     console.log(obj);
+//     // },
 
-    orderDelivery: function ({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
-        // console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
-    },
+//     orderDelivery: function ({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
+//         // console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
+//     },
 
-    orderPasta: function (ing1, ing2, ing3) {
-        console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
-    },
-};
+//     orderPasta: function (ing1, ing2, ing3) {
+//         console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+//     },
+// };
 
 // ---------------
 
@@ -251,7 +251,6 @@ const r = {
 // console.log(newR);
 
 // newR.categories.push('Japanese');
-
 
 // ---------------
 
@@ -350,4 +349,72 @@ const r = {
 
 // console.log(`${naam} is open on Friday from ${f_o} am to ${f_c} pm everyweek.`);
 // console.log(`${naam} is open on Saturday from ${s_o} am to ${s_c} pm everyweek.`);
+
+const r = {
+    name: 'Sourin\'s Rasoi',
+    location: 'Sourin City, Bangaluru, Karnataka, India',
+    categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
+    starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
+    mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
+    order: function (starterIndex, mainIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    },
+
+    openingHours: {
+        thu: {
+            open: 12,
+            close: 22,
+        },
+        fri: {
+            open: 11,
+            close: 23,
+        },
+        sat: {
+            open: 0,
+            close: 24,
+        },
+    },
+
+    // orderDelivery: function (obj) {
+    //     console.log(obj);
+    // },
+
+    orderDelivery: function ({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
+        // console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
+    },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+    },
+};
+
+// Rest Operator
+
+// Spead: Right side of assignment OP
+// const foo = [1,2,...[3,4]];
+// console.log(foo);
+
+// Rest: Left side of assignment OP
+// const [a,b,...others] = [1,2,3,4,5,6,7,8];
+
+// const [Thali, Biryani, ...otherFood] =  [...r.starterMenu, ...r.mainMenu];
+// console.log(Thali, Biryani, otherFood);
+
+// //objects
+
+// const {sat, ...weekDays} = r.openingHours;
+// console.log(weekDays);
+
+// functions
+
+// const add = function (...numbers) {
+//     console.log(a+b+c);
+// }
+
+// add(2,3);
+// add(5,3,7,2);
+// add(5,3,7,2,1,6,9);
+
+// const x = [10,20,30];
+// add(...x);
 
