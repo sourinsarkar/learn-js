@@ -350,43 +350,43 @@
 // console.log(`${naam} is open on Friday from ${f_o} am to ${f_c} pm everyweek.`);
 // console.log(`${naam} is open on Saturday from ${s_o} am to ${s_c} pm everyweek.`);
 
-const r = {
-    name: 'Sourin\'s Rasoi',
-    location: 'Sourin City, Bangaluru, Karnataka, India',
-    categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
-    starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
-    mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
-    order: function (starterIndex, mainIndex) {
-        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-    },
+// const r = {
+//     name: 'Sourin\'s Rasoi',
+//     location: 'Sourin City, Bangaluru, Karnataka, India',
+//     categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
+//     starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
+//     mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
+//     order: function (starterIndex, mainIndex) {
+//         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//     },
 
-    openingHours: {
-        thu: {
-            open: 12,
-            close: 22,
-        },
-        fri: {
-            open: 11,
-            close: 23,
-        },
-        sat: {
-            open: 0,
-            close: 24,
-        },
-    },
+//     openingHours: {
+//         thu: {
+//             open: 12,
+//             close: 22,
+//         },
+//         fri: {
+//             open: 11,
+//             close: 23,
+//         },
+//         sat: {
+//             open: 0,
+//             close: 24,
+//         },
+//     },
 
-    // orderDelivery: function (obj) {
-    //     console.log(obj);
-    // },
+//     orderDelivery: function (obj) {
+//         console.log(obj);
+//     },
 
-    orderDelivery: function ({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
-        // console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
-    },
+//     orderDelivery ({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
+//         console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
+//     },
 
-    orderPasta: function (ing1, ing2, ing3) {
-        console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
-    },
-};
+//     orderPasta: function (ing1, ing2, ing3) {
+//         console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+//     },
+// };
 
 // Rest Operator
 
@@ -417,4 +417,81 @@ const r = {
 
 // const x = [10,20,30];
 // add(...x);
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+
+// const menu = [...r.starterMenu, ...r.mainMenu];
+// console.log(menu);
+
+// for(const item of menu) console.log(item);
+
+// for(const item of menu.entries()) {
+//     console.log(item);
+// }
+
+// for(const item of menu.entries()) {
+//     console.log(`${item[0] + 1}: ${item[1]}`);
+// }
+
+// Time for some rivision:
+
+// r.orderDelivery({
+//     time: '22:30',
+//     address: 'Sayal, Ramgarh, JH',
+//     mainIndex: 2,
+//     starterIndex: 3,
+// });
+
+// r.orderDelivery({
+//     mainIndex: 1,
+//     starterIndex: 2,
+// })
+
+// ----------------------------------------------------------------------------------------------------------------------------
+
+// Enhanced Object Literals
+
+// const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat',' Sun'];
+
+// const openingHours = {
+//     [weekdays[4]]: {
+//         open: 12,
+//         close: 22,
+//     },
+//     [weekdays[5]]: {
+//         open: 11,
+//         close: 23,
+//     },
+//     [`day-${2+3}`]: {
+//         open: 0,
+//         close: 24,
+//     },
+// };
+
+// const r = {
+//     name: 'Sourin\'s Rasoi',
+//     location: 'Sourin City, Bangaluru, Karnataka, India',
+//     categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
+//     starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
+//     mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
+//     order: function (starterIndex, mainIndex) {
+//         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//     },
+
+//     openingHours,
+
+//     orderDelivery: function (obj) {
+//         console.log(obj);
+//     },
+
+//     orderDelivery ({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
+//         console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
+//     },
+
+//     orderPasta: function (ing1, ing2, ing3) {
+//         console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+//     },
+// };
+
+// ----------------------------------------------------------------------------------------------------------------------------
 
