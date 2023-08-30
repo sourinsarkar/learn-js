@@ -495,3 +495,111 @@
 
 // ----------------------------------------------------------------------------------------------------------------------------
 
+// Strings
+
+// const airline = "Fly Sourin: Air Voyager";
+// const plane = "A320";
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log(plane[3]);
+
+// console.log("Sourin"[4]);
+
+// console.log(airline.length);
+// console.log("sarkar".length);
+
+// console.log(airline.indexOf('l'));
+// console.log(airline.indexOf('f'));
+// console.log(airline.lastIndexOf('S'));
+
+// -----------------------------------------------------
+
+// Slice
+
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 10));
+// console.log(airline.slice(-7,-3));
+// console.log(airline.slice(16,-3));
+
+// const checkMiddleSeat = function(seat) {
+//     const s = seat.slice(-1);
+//     if(s === 'B' | s === 'E') console.log('You got the middle seat.');
+//     else console.log('You got lucky O_O');
+// };
+
+// checkMiddleSeat('11B');
+// checkMiddleSeat('23C');
+// checkMiddleSeat('3E');
+
+// const email = "work@sourin.in";
+// const loginEmail = "    wORK@SOUrin.in";
+
+// const normalEmail = loginEmail.toLowerCase().trim();
+
+// if(normalEmail === email) {
+//     console.log("Same");
+// } else {
+//     console.log("Different");
+// }
+
+// const announcement = "All passengers come to boarding door 26. Boarding door 26.";
+// console.log(announcement.replace("door", "gate"));
+// console.log(announcement.replaceAll("door", "gate"));
+// console.log(announcement.replace(/door/g, "gate"));
+
+// console.log(airline.includes("Sandhik"));
+// console.log(airline.includes("Sourin"));
+// console.log(airline.startsWith("Fly"));
+// console.log(airline.startsWith("Sourin"));
+// console.log(plane.startsWith("S"));
+// console.log(plane.startsWith("A"));
+
+// ------------------------------------------
+
+// Split & Join
+
+// console.log("sourin+sarkar".split('+'));
+// console.log("sourin sarkar".split(' '));
+
+// const [firstName, lastName] = "sourin sarkar".split(' ');
+// console.log(firstName, lastName);
+
+// const newName = ["Mr.", firstName, lastName.toUpperCase()].join(' ');
+// console.log(newName);
+
+// console.log(["Mr.", firstName, lastName.toUpperCase()]);
+// console.log(["Mr.", firstName, lastName.toUpperCase()].join(' '));
+// console.log(...["Mr.", firstName, lastName.toUpperCase()]);
+
+// const capitalizaName = function(name) {
+//     console.log(name.toUpperCase());
+// }
+
+// capitalizaName("sourin");
+// capitalizaName("sandhik");
+// capitalizaName("sanJEEvani");
+
+// ------------------------------------------
+
+// const capitalizeFirstLetter = function(name) {
+//     const names = name.split(' ');
+//     const newArray = []; 
+
+//     for(const n of names) {
+
+        // Way 1
+        // newArray.push(n[0].toUpperCase() + n.slice(1));
+
+        // Way 2
+//         newArray.push(n.replace(n[0], n[0].toUpperCase()));
+//     }
+//     console.log(newArray.join(' '));
+// }
+
+// capitalizeFirstLetter("indian space research organisation");
+
+// ------------------------------------------
+
+// Padding a String
