@@ -589,10 +589,10 @@
 
 //     for(const n of names) {
 
-        // Way 1
-        // newArray.push(n[0].toUpperCase() + n.slice(1));
+//         // Way 1
+//         newArray.push(n[0].toUpperCase() + n.slice(1));
 
-        // Way 2
+//         // Way 2
 //         newArray.push(n.replace(n[0], n[0].toUpperCase()));
 //     }
 //     console.log(newArray.join(' '));
@@ -603,3 +603,45 @@
 // ------------------------------------------
 
 // Padding a String
+
+// const message = "Sourin";
+// console.log(message.padStart(7, '+'));
+// console.log("Hello".padStart(7, '+'));
+
+// const maskCreditCard = function(number) {
+//     const str = number + '';
+//     const last = str.slice(-4);
+//     console.log(last.padStart(str.length, '*'));
+// }
+
+// maskCreditCard(18934672534768);
+// maskCreditCard('788675632576193280');
+
+// ------------------------------------------
+
+// Repeat
+
+// const message = 'soomeone ';
+// console.log(message.repeat(5));
+
+// const totalStudents = function(number) {
+//     console.log(`There are ${number} (${'👦'.repeat(number)}) students in this class.`);
+// }
+
+// totalStudents(1);
+// totalStudents(5);
+// totalStudents(10);
+// totalStudents(15);
+// totalStudents(50);
+
+// ------------------------------------------------------------------------------------------------------------
+
+// Capitalization: PRACTICE
+
+// const capFL = function(word) {
+//     const [fname, lname] = word.toLowerCase().trim().split('_');
+//     const output = `${fname}${lname.replace(lname[0], lname[0].toUpperCase())}`;
+//     console.log(output);
+// }
+
+// capFL('sourin_sarkar');
