@@ -647,3 +647,25 @@
 // capFL('sourin_sarkar');
 
 // ------------------------------------------------------------------------------------------------------------
+
+// Practice
+
+// splice(start, deleteCount, item1, ...., itemN);
+
+const months = ['JAN', 'FEB', 'MAR', 'MAY', 'APR','JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+// months.splice(4,2, 'Sourin', 'Sarkar');
+// months.splice(3, 4, "SUP");
+// console.log(months);
+
+// console.log(months.slice(0, 7));
+
+const str = 'I am a student studying in Lovely Professional University.';
+const sentence = str.split(' ');
+console.log(sentence.slice(-3).join(''));
+console.log(sentence.slice(-3).join(' '));
+const studentName = ['Sourin', 'Akansha'];
+
+for(let i = 0; i <= 1; i++) {
+    console.log(`${studentName[i]} goes to ${(sentence.slice(6).join(' '))}`);
+    console.log(`${studentName[i]} goes to ${(sentence.slice(6).join(' '))}`);
+}
