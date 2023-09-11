@@ -785,3 +785,127 @@
 // const winTeam = team1 < team2 ? "Team 1" : "Team 2"; // Way-1
 // team1 < team2 && console.log("Team1 is more likely to win.");
 // console.log(winTeam);
+
+// ---------------------------------------------- Opearations------------------------------------------
+
+// const newArray = [...toAdd, array];
+
+// const toAdd = [1,2,3];
+// const array = [4,5,6];
+// const newArray = [1,2,3, ...array];
+// const newArray2 = [...toAdd, '4', '5', '6'];
+// console.log(...newArray2);
+// console.log(...r.mainMenu, 'Aam', 'Amrud');
+
+// const ingredients = [
+//     prompt("First ingredient?"),
+//     prompt("Second ingredient?"),
+//     prompt("Third ingredient?"),
+// ]
+
+// // r.orderPasta("Jalapeno", "Oregano", "Tomato");
+// r.orderPasta(ingredients[0] ,ingredients[1] ,ingredients[2]);
+// r.orderPasta(...ingredients);
+
+// --------------------------------------------------------------------------------------------------------------------------------------------
+
+// Optional Chaining
+
+// Using the same onject: Restaurant
+
+const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+const openingHours = {
+    [weekdays[4]]: {
+        open: 12,
+        close: 22,
+    },
+    [weekdays[5]]: {
+        open: 11,
+        close: 23,
+    },
+    [weekdays[6]]: {
+        open: 0,
+        close: 24,
+    },
+}
+
+const r = {
+    name: 'Sourin\'s Rasoi',
+    location: 'Sourin City, Bangaluru, Karnataka, India',
+    categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
+    starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
+    mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
+    order: function (starterIndex, mainIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    },
+
+    openingHours,
+
+    orderDelivery: function (obj) {
+        console.log(obj);
+    },
+
+    orderDelivery({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
+        console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
+    },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+    },
+};
+
+// if(r.openingHours.Fri) console.log(r.openingHours.Fri.open);
+// console.log(r.openingHours.Tue ?. open);
+
+// for(const day of weekdays) {
+//     console.log(day);
+//     const open = r.openingHours[day] ?. open ?? 'closed';
+//     console.log(`We are open on ${day} at ${open}`);
+// }
+
+// ?. On Methods
+// const food = r.order ?. (0,1) ?? "Menu doesn't exist!";
+// console.log(food);
+
+// ?. On Arrays
+// const users = [{
+//     name: 'Sourin',
+//     email: 'helloworld@sourin.in'
+// }];
+
+// console.log(users[0] ?. name ?? 'User array empty!');
+// console.log(r.name ?. name ?? 'No Di Dhabba');
+
+// --------------------------------------------------------------------------------------------------------------------------------------------
+
+// Looping over Objects
+
+// PROPERTIES NAMES Only
+// const properties = Object.keys(openingHours);
+// // console.log(properties, properties.length);
+
+// let contentLine = `We are open on ${properties.length} days: `;
+
+// for (const day of properties) {
+//     // console.log(day);
+//     contentLine +=  `${day}, `;
+// }
+
+// console.log(contentLine.replace("Sun,", "Sun."));
+
+// -------------------------------------------------------
+
+// PROPERTY Values
+
+// const {odds: {team1, x: draw, team2}} = game;
+// console.log(team1);
+// console.log(draw);
+// console.log(team2);
+
+const entries = Object.entries(openingHours);
+console.log(entries);   
+
+for(const [keys, {open, close}] of entries) {
+    console.log(`All of our stores open every ${keys} at ${open}AM and close ${close}PM.`);
+}
