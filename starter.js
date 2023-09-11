@@ -697,3 +697,91 @@
 
 // console.log(rest1);
 // console.log(rest2);
+
+// --------------------------------------------------------------------------------------------------------------------------------------------
+
+// Practice Game
+
+// const game = {
+//     team1: 'Bayern Munich',
+//     team2: 'Borrussia Dortmund',
+//     players: [
+//         [
+//             'Neuer',
+//             'Pavard',
+//             'Martinez',
+//             'Alaba',
+//             'Davies',
+//             'Kimmich',
+//             'Goretzka',
+//             'Coman',
+//             'Muller',
+//             'Gnarby',
+//             'Lewandowski',
+//         ],
+//         [
+//             'Burki',
+//             'Schulz',
+//             'Hummels',
+//             'Akanji',
+//             'Hakimi',
+//             'Weigl',
+//             'Witsel',
+//             'Hazard',
+//             'Brandt',
+//             'Sancho',
+//             'Gotze',
+//         ],
+//     ],
+//     score: '4:0',
+//     scored: ['Lewandowski', 'Gnarby', 'Lewandowski',
+//         'Hummels'],
+//     date: 'Nov 9th, 2037',
+//     odds: {
+//         team1: 1.33,
+//         x: 3.25,
+//         team2: 6.5,
+//     },
+// };
+
+// Sol-1
+
+// const [players1, players2] = game.players;
+
+// Sol-2
+
+// const [gk, ...fieldPlayers] = players1;
+// console.log(gk);
+// console.log(fieldPlayers);
+
+// Sol-3
+
+// const allPlayers = [...players1, ...players2];
+// console.log(allPlayers);
+
+// Sol-4
+
+// const newPlayers1 = [...players1, 'Swapnil', 'Sourin', 'Suman'];
+// console.log(newPlayers1);
+
+// Sol-5
+
+// const {odds: {team1, x: draw, team2}} = game;
+// console.log(`Team 1: ${team1}
+// Draw: ${draw}
+// Team 2: ${team2}`);
+
+// Sol-6
+
+// const printGoals = function(...players) {
+//     console.log(`${players.length} goals were scored.`);
+// }
+
+// printGoals('Sourin', 'Swapnil', 'Suman', 'Sandhik');
+// printGoals(...game.scored);
+
+// Sol-7
+
+// const winTeam = team1 < team2 ? "Team 1" : "Team 2"; // Way-1
+// team1 < team2 && console.log("Team1 is more likely to win.");
+// console.log(winTeam);
