@@ -902,8 +902,8 @@
 // console.log(values);
 
 // for(const {open, close} of values) {
-    //     console.log(`Our store ${open}, ${close}`);
-    // }
+//     console.log(`Our store ${open}, ${close}`);
+// }
 
 // const entries = Object.entries(openingHours);
 // console.log(entries);   
@@ -916,47 +916,47 @@
 
 // Practice Questions
 
-const game = {
-    team1: 'Bayern Munich',
-    team2: 'Borrussia Dortmund',
-    players: [
-        [
-            'Neuer',
-            'Pavard',
-            'Martinez',
-            'Alaba',
-            'Davies',
-            'Kimmich',
-            'Goretzka',
-            'Coman',
-            'Muller',
-            'Gnarby',
-            'Lewandowski',
-        ],
-        [
-            'Burki',
-            'Schulz',
-            'Hummels',
-            'Akanji',
-            'Hakimi',
-            'Weigl',
-            'Witsel',
-            'Hazard',
-            'Brandt',
-            'Sancho',
-            'Gotze',
-        ],
-    ],
-    score: '4:0',
-    scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 
-        'Hummels'],
-    date: 'Nov 9th, 2037',
-    odds: {
-        team1: 1.33,
-        x: 3.25,
-        team2: 6.5,
-    },
-};
+// const game = {
+//     team1: 'Bayern Munich',
+//     team2: 'Borrussia Dortmund',
+//     players: [
+//         [
+//             'Neuer',
+//             'Pavard',
+//             'Martinez',
+//             'Alaba',
+//             'Davies',
+//             'Kimmich',
+//             'Goretzka',
+//             'Coman',
+//             'Muller',
+//             'Gnarby',
+//             'Lewandowski',
+//         ],
+//         [
+//             'Burki',
+//             'Schulz',
+//             'Hummels',
+//             'Akanji',
+//             'Hakimi',
+//             'Weigl',
+//             'Witsel',
+//             'Hazard',
+//             'Brandt',
+//             'Sancho',
+//             'Gotze',
+//         ],
+//     ],
+//     score: '4:0',
+//     scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 
+//         'Hummels'],
+//     date: 'Nov 9th, 2037',
+//     odds: {
+//         team1: 1.33,
+//         x: 3.25,
+//         team2: 6.5,
+//     },
+// };
 
 // Sol-1
 
@@ -991,4 +991,145 @@ const game = {
 //     const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
 //     console.log(`Odd of ${teamStr}: ${odd}`);
 // }
+
+// --------------------------------------------------------------------------------------------------------------------------------------------
+
+// Sets - Collection of unique values and can never have duplicates
+
+const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+const openingHours = {
+    [weekdays[4]]: {
+        open: 12,
+        close: 22,
+    },
+    [weekdays[5]]: {
+        open: 11,
+        close: 23,
+    },
+    [weekdays[6]]: {
+        open: 0,
+        close: 24,
+    },
+}
+
+const r = {
+    name: 'Sourin\'s Rasoi',
+    location: 'Sourin City, Bangaluru, Karnataka, India',
+    categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
+    starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
+    mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
+    order: function (starterIndex, mainIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+    },
+
+    openingHours,
+
+    orderDelivery: function (obj) {
+        console.log(obj);
+    },
+
+    orderDelivery({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
+        console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
+    },
+
+    orderPasta: function (ing1, ing2, ing3) {
+        console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+    },
+};
+
+const orderedSet = new Set(['Kangana', 'Kangana', 'Sourin', 'Sheetal', 'Kangana', 'Kangana', 'Nalini', 'Sourin', 'Kangana', 'Sourin', 'Sourin', 'Kangana'])
+const array = ['Kangana', 'Kangana', 'Sourin', 'Sheetal', 'Kangana', 'Kangana', 'Nalini', 'Sourin', 'Kangana', 'Sourin', 'Sourin', 'Kangana'];
+// console.log(orderedSet);
+
+// console.log(new Set("Sourin"));
+// console.log(new Set());
+// console.log(orderedSet.has('Muskan'));
+// console.log(orderedSet.has('Amisha'));
+// console.log(orderedSet.has('Nalini'));
+// orderedSet.add('Amisha');
+// console.log(orderedSet.has('Amisha'));
+
+// const newSet = new Set(array);
+// const newSet1 = [...new Set(array)]; // Conversion from Set to Array iterable
+// console.log(array);
+// console.log(newSet);
+// console.log(newSet1);
+
+// console.log(orderedSet.size);
+// console.log(new Set(['Kangana', 'Kangana', 'Sourin', 'Sheetal', 'Kangana', 'Kangana', 'Nalini', 'Sourin', 'Kangana', 'Sourin', 'Sourin', 'Kangana']).size);
+// console.log(new Set('Sourin').size);
+
+// Maps --------------------------------------------
+
+const rest = new Map();
+
+rest.set('name', 'No Di Dhabba');
+rest.set(1, 'Ranchi, JH');
+rest.set(2, 'Visakhapatnam, AP');
+rest
+    .set('categories', ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'])
+    .set('open', 11)
+    .set('close', 23)
+    .set(true, 'We are open :)')
+    .set(false, 'We are closed :(');
+
+// console.log(rest.get('name'));
+// console.log(rest.get('open'));
+// console.log(rest.get('close'));
+
+// const time = 21;
+
+// console.log(rest.get(time >= rest.get('open') && time <= rest.get('close')));
+
+
+// console.log(rest.has('categories'));
+// rest.delete(1);
+// console.log(rest);
+
+// console.log(rest.size);
+
+// Using Arrays as Map Keys
+
+// const arr = [1,2];
+// rest.set(arr, 'Test');
+// console.log(rest.get(arr));
+
+// Alternative way to populate a MAP ------------------------
+
+const question = new Map([
+    ['question', 'What is the best programming language in the World?'],
+    [1, 'C'],
+    [2, 'C++'],
+    [3, 'C#'],
+    [4, 'Objective-C'],
+    ['correct', 2],
+    [true, 'Correct'],
+    [false, 'Try Again'],
+]);
+
+// console.log(Object.entries(openingHours)); // Object.entries() looks similar to the Map
+
+// Converting Objects to Map -----------------------------
+
+// console.log(question);
+
+// const hoursMap = new Map(Object.entries(openingHours));
+// console.log(hoursMap);
+
+// // Quiz App -----------------
+// console.log(question.get('question'));
+
+// for(const [key, value] of question) {
+
+//     if(typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
+
+// const answer = Number(prompt('Your answer'));
+
+// console.log(question.get(question.get('correct') === answer));
+
+// Converting Maps to Arrays
+// console.log(question);
+// console.log([...question]);
 
