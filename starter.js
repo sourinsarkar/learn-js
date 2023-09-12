@@ -813,47 +813,47 @@
 
 // Using the same onject: Restaurant
 
-const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+// const weekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
-const openingHours = {
-    [weekdays[4]]: {
-        open: 12,
-        close: 22,
-    },
-    [weekdays[5]]: {
-        open: 11,
-        close: 23,
-    },
-    [weekdays[6]]: {
-        open: 0,
-        close: 24,
-    },
-}
+// const openingHours = {
+//     [weekdays[4]]: {
+//         open: 12,
+//         close: 22,
+//     },
+//     [weekdays[5]]: {
+//         open: 11,
+//         close: 23,
+//     },
+//     [weekdays[6]]: {
+//         open: 0,
+//         close: 24,
+//     },
+// }
 
-const r = {
-    name: 'Sourin\'s Rasoi',
-    location: 'Sourin City, Bangaluru, Karnataka, India',
-    categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
-    starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
-    mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
-    order: function (starterIndex, mainIndex) {
-        return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-    },
+// const r = {
+//     name: 'Sourin\'s Rasoi',
+//     location: 'Sourin City, Bangaluru, Karnataka, India',
+//     categories: ['North Indian', 'South Indian', 'Kannadiga', 'Khatta'],
+//     starterMenu: ['Idli', 'Aloo Bonda', 'Upma', 'Uttappam', 'Poha', 'Sabudana'],
+//     mainMenu: ['Thali', 'Biryani', 'Dal Bati Churma'],
+//     order: function (starterIndex, mainIndex) {
+//         return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//     },
 
-    openingHours,
+//     openingHours,
 
-    orderDelivery: function (obj) {
-        console.log(obj);
-    },
+//     orderDelivery: function (obj) {
+//         console.log(obj);
+//     },
 
-    orderDelivery({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
-        console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
-    },
+//     orderDelivery({ time = '10:00', address = 'Lalpur, Ranchi, JH', starterIndex, mainIndex }) {
+//         console.log(`Order received for ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}. Order placed ${time} and will be delivered to ${address}.`);
+//     },
 
-    orderPasta: function (ing1, ing2, ing3) {
-        console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
-    },
-};
+//     orderPasta: function (ing1, ing2, ing3) {
+//         console.log(`Here\'s your delicious pasta with ${ing1}, ${ing2} and ${ing3}.`);
+//     },
+// };
 
 // if(r.openingHours.Fri) console.log(r.openingHours.Fri.open);
 // console.log(r.openingHours.Tue ?. open);
@@ -883,7 +883,7 @@ const r = {
 
 // PROPERTIES NAMES Only
 // const properties = Object.keys(openingHours);
-// // console.log(properties, properties.length);
+// console.log(properties, properties.length);
 
 // let contentLine = `We are open on ${properties.length} days: `;
 
@@ -898,14 +898,97 @@ const r = {
 
 // PROPERTY Values
 
-// const {odds: {team1, x: draw, team2}} = game;
-// console.log(team1);
-// console.log(draw);
-// console.log(team2);
+// const values = Object.values(openingHours);
+// console.log(values);
 
-const entries = Object.entries(openingHours);
-console.log(entries);   
+// for(const {open, close} of values) {
+    //     console.log(`Our store ${open}, ${close}`);
+    // }
 
-for(const [keys, {open, close}] of entries) {
-    console.log(`All of our stores open every ${keys} at ${open}AM and close ${close}PM.`);
-}
+// const entries = Object.entries(openingHours);
+// console.log(entries);   
+
+// for(const [keys, {open, close}] of entries) {
+//     console.log(`All of our stores open every ${keys} at ${open}AM and close ${close}PM.`);
+// }
+
+// -------------------------------------------------------
+
+// Practice Questions
+
+const game = {
+    team1: 'Bayern Munich',
+    team2: 'Borrussia Dortmund',
+    players: [
+        [
+            'Neuer',
+            'Pavard',
+            'Martinez',
+            'Alaba',
+            'Davies',
+            'Kimmich',
+            'Goretzka',
+            'Coman',
+            'Muller',
+            'Gnarby',
+            'Lewandowski',
+        ],
+        [
+            'Burki',
+            'Schulz',
+            'Hummels',
+            'Akanji',
+            'Hakimi',
+            'Weigl',
+            'Witsel',
+            'Hazard',
+            'Brandt',
+            'Sancho',
+            'Gotze',
+        ],
+    ],
+    score: '4:0',
+    scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 
+        'Hummels'],
+    date: 'Nov 9th, 2037',
+    odds: {
+        team1: 1.33,
+        x: 3.25,
+        team2: 6.5,
+    },
+};
+
+// Sol-1
+
+// Way-1
+
+// const playersScored = [...game.scored];
+// let count = 1;
+// for(const pS of playersScored) {
+//     console.log(`Goal ${count}: ${pS}`);
+//     count++;
+// }
+
+// Way-2
+
+// for(const [i, players] of game.scored.entries()) {
+//     console.log(`Goal ${i + 1}: ${players}`);
+// }
+
+// Sol-2
+
+// const oddItems = Object.values(game.odds);
+// let sum = 0;
+// for(const items of oddItems) {
+//     sum += items;
+// }
+
+// console.log(sum/oddItems.length);
+
+// Sol-3
+
+// for(const [team, odd] of Object.entries(game.odds)) {
+//     const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
+//     console.log(`Odd of ${teamStr}: ${odd}`);
+// }
+
