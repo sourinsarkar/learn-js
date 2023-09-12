@@ -1176,4 +1176,3 @@ const question = new Map([
 //     const half = key <= 45 ? '[FIRST HALF]' : '[SECOND HALF]';
 //     console.log(`${half} ${key} : ${value}`);
 // }
-
