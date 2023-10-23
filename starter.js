@@ -1038,10 +1038,25 @@ const r = {
     },
 };
 
+// console.log(r.openingHours[weekdays[4]].open); // this is correct
+
+// if(r.openingHours.mon) {
+//     console.log(r.openingHours.mon.open);
+// }
+
+// console.log(r.openingHours?.[weekdays[4]]?.open); // this is correct
+
+const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+
+for (const day of days) {
+    const open = r.openingHours[day]?.open ?? "cl osed";
+    console.log(`On ${day}, we're open at ${open}`);
+}
+
+// console.log(r.openingHours.Thu.open);
+
 const orderedSet = new Set(['Kangana', 'Kangana', 'Sourin', 'Sheetal', 'Kangana', 'Kangana', 'Nalini', 'Sourin', 'Kangana', 'Sourin', 'Sourin', 'Kangana'])
 const array = ['Kangana', 'Kangana', 'Sourin', 'Sheetal', 'Kangana', 'Kangana', 'Nalini', 'Sourin', 'Kangana', 'Sourin', 'Sourin', 'Kangana'];
-
-
 
 // console.log(orderedSet);
 
