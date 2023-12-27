@@ -1,4 +1,4 @@
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'sat', 'sun']
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 
 const openingHours = {
     [weekdays[3]]: {
@@ -51,3 +51,32 @@ const r = {
 //     console.log(`${m + 1}: ${n}`);
 // }
 
+// Optional Chaining
+
+// console.log(r.openingHours.mon?.open);
+
+// for (const day of weekdays) {
+//     const open = r.openingHours[day]?.open ?? 'closed';
+//     console.log(`On ${day}day, we open at ${open}`);
+// }
+
+// console.log(r.order?.(0,1) ?? 'Method does not exist.');
+// console.log(weekdays?.[5] ?? 'Method does not exist') ;
+
+// const user = [
+//     {
+//         name: 'Sourin',
+//         email: 'sourin@example.com',
+//     }
+// ];
+
+// console.log(user[0]?.name ?? "User's name is annonymous.");
+
+const propK = Object.keys(openingHours);
+const propV = Object.values(openingHours);
+console.log(propK.length);
+console.log(propV.length);
+
+for(const day of Object.values(openingHours)) {
+    console.log(day);
+}
