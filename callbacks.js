@@ -7,21 +7,37 @@
 //     console.log(`Rahul scored ${input} marks.`);
 // };
 
-function operations(num1, num2, operationToggle) {
-    const answer = operationToggle(num1, num2);
-    return answer;
+// ---------------------------------------------------
+
+// function operations(num1, num2, operationToggle) {
+//     const answer = operationToggle(num1, num2);
+//     return answer;
+// }
+
+// function sum(num1, num2) {
+//     return num1 + num2;   
+// }
+
+// function minus(num1, num2) {
+//     if(num1 > num2)
+//         return num1 - num2;
+//     else
+//         return num2 - num1;   
+// }
+
+// const answer = operations(1, 2, sum);
+// console.log(answer);
+
+// ---------------------------------------------------
+
+function morning() {
+    console.log("Good morning");
 }
 
-function sum(num1, num2) {
-    return num1 + num2;   
+function night() {
+    console.log("Good night");
 }
 
-function minus(num1, num2) {
-    if(num1 > num2)
-        return num1 - num2;
-    else
-        return num2 - num1;   
-}
+setTimeout(morning, 3000);
 
-const answer = operations(1, 2, sum);
-console.log(answer);
+setInterval(night, 3000);
